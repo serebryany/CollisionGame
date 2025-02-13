@@ -98,6 +98,12 @@ remaining_o_atom = None
 while True:
     screen.fill(WHITE)
 
+    # Draw title and reaction name
+    font = pygame.font.Font(None, 50)
+    screen.blit(font.render("Collision Game", True, BLACK), (255, 10))
+    font = pygame.font.Font(None, 24)
+    screen.blit(font.render("Reaction: CO + O2 -> CO2", True, BLACK), (255, 50))
+
     # Draw legend
     font = pygame.font.Font(None, 24)
     screen.blit(font.render("Controls:", True, BLACK), (10, 10))
