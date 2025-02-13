@@ -103,11 +103,11 @@ while True:
     screen.blit(font.render("Controls:", True, BLACK), (10, 10))
     screen.blit(font.render("Arrow Keys - Move", True, BLACK), (10, 30))
     screen.blit(font.render("R - Rotate Right", True, BLACK), (10, 50))
-    screen.blit(font.render("L - Rotate Left", True, BLACK), (10, 70))
+    screen.blit(font.render("E - Rotate Left", True, BLACK), (10, 70))
     screen.blit(font.render("Molecules:", True, BLACK), (10, 100))
-    pygame.draw.circle(screen, GREY, (20, 120), 10)
+    pygame.draw.circle(screen, GREY, (20, 123), 7)
     screen.blit(font.render("Carbon (C)", True, BLACK), (40, 115))
-    pygame.draw.circle(screen, RED, (20, 140), 10)
+    pygame.draw.circle(screen, RED, (20, 143), 7)
     screen.blit(font.render("Oxygen (O)", True, BLACK), (40, 135))
 
     # Draw restart button
@@ -145,7 +145,7 @@ while True:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_r and selected_molecule:
                 selected_molecule.rotate(math.radians(10))
-            if event.key == pygame.K_l and selected_molecule:
+            if event.key == pygame.K_e and selected_molecule:
                 selected_molecule.rotate(math.radians(-10))
 
     # Move selected molecule with arrow keys
